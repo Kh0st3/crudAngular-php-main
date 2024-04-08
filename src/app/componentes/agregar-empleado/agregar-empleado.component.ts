@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { CrudService } from 'src/app/servicio/crud.service';
 
@@ -20,10 +20,12 @@ export class AgregarEmpleadoComponent implements OnInit {
     private ruteador: Router
     ) {
 
-    this.formularioDeEmpleados=this.formulario.group({
-      nombre:[''],
-      correo: ['']
-    });
+      this.formularioDeEmpleados = this.formulario.group({
+        nombre: ['', [Validators.required, Validators.pattern(/^[^\s]*$/)]],
+        correo: ['', [Validators.required, Validators.pattern(/^\S+$/)]],
+        telefono: ['', [Validators.required, Validators.pattern(/^\S+$/)]],
+        edad: ['', [Validators.required, Validators.pattern(/^\S+$/)]]
+      });
 
    }
 

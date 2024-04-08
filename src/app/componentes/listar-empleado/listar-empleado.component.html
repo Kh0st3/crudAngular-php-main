@@ -16,6 +16,8 @@
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Correo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">edad</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -24,6 +26,8 @@
                         <td>{{ empleado.id }}</td>
                         <td>{{ empleado.nombre }}</td>
                         <td>{{ empleado.correo }}</td>
+                        <td>{{ empleado.telefono }}</td>
+                        <td>{{ empleado.edad }}</td>
                         <td>
                             <a class="btn btn-info" routerLink="/editar-empleado/{{empleado.id}}">Editar </a>| 
                             

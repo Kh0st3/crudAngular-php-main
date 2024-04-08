@@ -1,5 +1,7 @@
 export class Empleado {
     id!: String;
     nombre!: String;
-    correo!: String
+    correo!: String;
+    telefono!: Number;
+    edad!: Number;
 }

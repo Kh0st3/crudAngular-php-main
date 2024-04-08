@@ -28,7 +28,9 @@ export class EditarEmpleadoComponent implements OnInit {
         console.log(respuesta);
         this.formularioDeEmpleados.setValue({
           nombre:respuesta[0]['nombre'],
-          correo:respuesta[0]['correo']
+          correo:respuesta[0]['correo'],
+          telefono:respuesta[0]['telefono'],
+          edad:respuesta[0]['edad'],
         })
       }
     );
@@ -36,7 +38,9 @@ export class EditarEmpleadoComponent implements OnInit {
     this.formularioDeEmpleados=this.formulario.group(
       {
         nombre:[''],
-        correo:['']
+        correo:[''],
+        telefono:[''],
+        edad:[''],
       }
     )
    }
